@@ -1,6 +1,4 @@
-Tardigrade
+Tardigrade - PGD
 =====
 
-"Fork Tardigrade" to create a new MOOSE-based application.
-
-For more information see: [http://mooseframework.org/create-an-app/](http://mooseframework.org/create-an-app/)
+A sample code that will showcase PGD for a simple neutronics calculation within the MOOSE Framework. 
