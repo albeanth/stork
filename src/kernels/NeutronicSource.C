@@ -25,11 +25,11 @@ InputParameters validParams<NeutronicSource>()
   return params;
 }
 
-
 NeutronicSource::NeutronicSource(const InputParameters & parameters) :
     EigenKernel(parameters),
     _nu_sigma_f_xs(getMaterialProperty<Real>("nu_sigma_f_g0"))
-{}
+{
+}
 
 Real
 NeutronicSource::computeQpResidual()

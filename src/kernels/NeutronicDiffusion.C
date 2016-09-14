@@ -25,7 +25,6 @@ InputParameters validParams<NeutronicDiffusion>()
   return params;
 }
 
-
 NeutronicDiffusion::NeutronicDiffusion(const InputParameters & parameters) :
     Diffusion(parameters),
     _diffusion_coef(getMaterialProperty<Real>("diffusion_coef_g0"))

@@ -31,8 +31,8 @@ class NeutronicSource : public EigenKernel
 {
 public:
   //default constructor
-  NeutronicSource(const std::string & name, InputParameters parameters);
-  
+  NeutronicSource(const InputParameters & parameters);
+
 protected:
   virtual Real computeQpResidual();
   virtual Real computeQpJacobian();
@@ -41,6 +41,6 @@ protected:
    * This MooseArray will hold the reference we need to our
    * material property from the Material class
    */
-  MaterialProperty<Real> & _nu_sigma_f_xs;
+  const MaterialProperty<Real> & _nu_sigma_f_xs;
 };
 #endif //NEUTRONICSOURCE_H

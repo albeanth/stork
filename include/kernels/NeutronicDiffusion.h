@@ -31,7 +31,7 @@ class NeutronicDiffusion : public Diffusion
 {
 public:
   //default constructor
-  NeutronicDiffusion(const std::string & name, InputParameters parameters);
+  NeutronicDiffusion(const InputParameters & parameters);
 
 protected:
   virtual Real computeQpResidual();
@@ -41,6 +41,6 @@ protected:
    * This MooseArray will hold the reference we need to our
    * material property from the Material class
    */
-  MaterialProperty<Real> & _diffusion_coef;
+  const MaterialProperty<Real> & _diffusion_coef;
 };
 #endif //NEUTRONICDIFFUSION_H

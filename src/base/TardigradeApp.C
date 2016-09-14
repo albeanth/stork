@@ -3,6 +3,10 @@
 #include "AppFactory.h"
 #include "ModulesApp.h"
 #include "MooseSyntax.h"
+#include "NeutronicDiffusion.h"
+#include "NeutronicRemoval.h"
+#include "NeutronicSource.h"
+#include "DiffusionNeutronicsMaterial.h"
 
 template<>
 InputParameters validParams<TardigradeApp>()
@@ -45,6 +49,10 @@ extern "C" void TardigradeApp__registerObjects(Factory & factory) { TardigradeAp
 void
 TardigradeApp::registerObjects(Factory & factory)
 {
+  registerMaterial(DiffusionNeutronicsMaterial);
+  registerKernel(NeutronicDiffusion);
+  registerKernel(NeutronicRemoval);
+  registerKernel(NeutronicSource);
 }
 
 // External entry point for dynamic syntax association

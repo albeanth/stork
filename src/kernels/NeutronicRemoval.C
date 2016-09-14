@@ -25,11 +25,11 @@ InputParameters validParams<NeutronicRemoval>()
   return params;
 }
 
-
 NeutronicRemoval::NeutronicRemoval(const InputParameters & parameters) :
     Reaction(parameters),
     _absorption_xs(getMaterialProperty<Real>("absorption_xs_g0"))
-{}
+{
+}
 
 Real
 NeutronicRemoval::computeQpResidual()
