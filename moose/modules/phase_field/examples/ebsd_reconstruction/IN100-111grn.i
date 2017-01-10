@@ -1,7 +1,7 @@
 [Mesh]
   uniform_refine = 2
   type = EBSDMesh
-  filename = IN100_128x128.txt
+  filename = IN100_120x120.txt
 []
 
 [GlobalParams]
